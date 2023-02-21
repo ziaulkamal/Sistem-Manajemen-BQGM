@@ -56,8 +56,13 @@
 		if (isset($data)) {
 			if ($data->gambarProfil != '') { ?>
 		<div class="col-md-3">
+
 			<div class="card">
-				<img class="wd-320 ht-320" src="<?= base_url('public/assets/images/users/').$data->gambarProfil ?>" alt="">
+				<picture>
+					<source srcset="<?= base_url('public/assets/images/users/').$data->gambarProfil ?>" type="image/svg+xml">
+					<img src="<?= base_url('public/assets/images/users/').$data->gambarProfil ?>" class="img-fluid img-thumbnail" alt="...">
+				</picture>	
+				<!-- <img class="img-thumbnail" src="<?= base_url('public/assets/images/users/').$data->gambarProfil ?>" alt=""> -->
 
 			</div>
 		</div>

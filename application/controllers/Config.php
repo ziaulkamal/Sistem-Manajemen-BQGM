@@ -58,7 +58,7 @@ class Config extends CI_Controller {
     {
         $config = array(
             'allowed_types' => 'jpg|png|jpeg|webp',
-            'max_size'      => 6000,
+            'max_size'      => 10000,
             'overwrite'     => TRUE,
             'upload_path'   => './public/assets/images/users/',
             'encrypt_name'  => TRUE,

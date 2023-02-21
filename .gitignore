@@ -1,1 +1,4 @@
 vendor/
+public/img_documents/*
+public/img_ktp/*
+public/images/users/*

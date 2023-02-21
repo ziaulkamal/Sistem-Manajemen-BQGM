@@ -7,7 +7,7 @@ class Dashboard_model extends CI_Model
     function totalHutang()
     {
         $this->db->select_sum('nilaiTransaksi');
-        $this->db->where_in('type', ['keluar', 'belanja', 'pembiayaan', 'pinjaman','tsimpok','tsimwa','tsimka']);
+        $this->db->where_in('type', ['pembiayaan', 'pinjaman']);
         $result = $this->db->get('bq_transaksi')->row();
         return $result->nilaiTransaksi;
     }
@@ -16,7 +16,7 @@ class Dashboard_model extends CI_Model
     {
         // Hitung total nilai transaksi pada bulan ini
         $this->db->select_sum('nilaiTransaksi');
-        $this->db->where_in('type', ['keluar', 'belanja', 'pembiayaan', 'pinjaman','tsimpok','tsimwa','tsimka']);
+        $this->db->where_in('type', ['pembiayaan', 'pinjaman']);
         $this->db->where('lastUpdate_t >=', date('Y-m-01'));
         $this->db->where('lastUpdate_t <=', date('Y-m-t'));
         $result_bulan_ini = $this->db->get('bq_transaksi')->row();
@@ -24,7 +24,7 @@ class Dashboard_model extends CI_Model
 
         // Hitung total nilai transaksi pada bulan sebelumnya
         $this->db->select_sum('nilaiTransaksi');
-        $this->db->where_in('type', ['keluar', 'belanja', 'pembiayaan', 'pinjaman','tsimpok','tsimwa','tsimka']);
+        $this->db->where_in('type', ['pembiayaan', 'pinjaman']);
         $this->db->where('lastUpdate_t >=', date('Y-m-01', strtotime('-1 month')));
         $this->db->where('lastUpdate_t <=', date('Y-m-t', strtotime('-1 month')));
         $result_bulan_sebelumnya = $this->db->get('bq_transaksi')->row();
@@ -44,7 +44,7 @@ class Dashboard_model extends CI_Model
     function totalPiutang()
     {
         $this->db->select_sum('nilaiTransaksi');
-        $this->db->where_in('type', ['masuk', 'setoran', 'angsuran', 'simpok','simwa','simka']);
+        $this->db->where_in('type', ['setoran', 'angsuran']);
         $result = $this->db->get('bq_transaksi')->row();
         return $result->nilaiTransaksi;
     }
@@ -53,7 +53,7 @@ class Dashboard_model extends CI_Model
     {
         // Hitung total nilai piutang
         $this->db->select_sum('nilaiTransaksi');
-        $this->db->where_in('type', ['masuk', 'setoran', 'angsuran', 'simpok','simwa','simka']);
+        $this->db->where_in('type', ['setoran', 'angsuran']);
         $this->db->where('lastUpdate_t >=', date('Y-m-01'));
         $this->db->where('lastUpdate_t <=', date('Y-m-t'));
         $result_bulan_ini = $this->db->get('bq_transaksi')->row();
@@ -61,7 +61,7 @@ class Dashboard_model extends CI_Model
 
         // Hitung persentase piutang
         $this->db->select_sum('nilaiTransaksi');
-        $this->db->where_in('type', ['keluar', 'belanja', 'pembiayaan', 'pinjaman','tsimpok','tsimwa','tsimka']);
+        $this->db->where_in('type', ['setoran', 'angsuran']);
         $this->db->where('lastUpdate_t >=', date('Y-m-01', strtotime('-1 month')));
         $this->db->where('lastUpdate_t <=', date('Y-m-t', strtotime('-1 month')));
         $result_bulan_sebelumnya = $this->db->get('bq_transaksi')->row();
