@@ -64,15 +64,15 @@
 								<tr>
 									<th>No</th>
 									<th>ID Pinjaman</th>
+									<th>ID Anggota</th>
 									<th>Nama Anggota</th>
 									<th>Plafon</th>
 									<th>Pokok Rahn</th>
-									<th>Pokok Mudharabah</th>
-									<th>Bagi Hasil</th>
 									<th>O/S Rahn</th>
+									<th>Pokok Mudharabah</th>
 									<th>O/S Mudharabah</th>
+									<th>Bagi Hasil</th>
 									<th>O/S Bagi Hasil</th>
-									<th>Tenor Panen</th>
 									<th>Sisa Tenor</th>
 									<th>Tanggal Pengajuan</th>
 								</tr>
@@ -83,15 +83,15 @@
                                         <tr>
                                             <td><?= $no++ ?></td>
                                             <td><?= $r->id_pinjaman ?></td>
+                                            <td><?= $r->anggota_id ?></td>
                                             <td><?= ucwords($r->namaAnggota) ?></td>
                                             <td><?= 'Rp. ' . number_format($r->pokokRahn + $r->pokokMudharabah) ?></td>
                                             <td><?= 'Rp. ' . number_format($r->pokokRahn) ?></td>
-                                            <td><?= 'Rp. ' . number_format($r->pokokMudharabah) ?></td>
-                                            <td><?= 'Rp. ' . number_format($r->bagiHasil*$r->tenor) ?></td>
                                             <td><?= 'Rp. ' . number_format((($r->pokokRahn/$r->tenor)*$r->sisaTenor)) ?></td>
+                                            <td><?= 'Rp. ' . number_format($r->pokokMudharabah) ?></td>
                                             <td><?= 'Rp. ' . number_format((($r->pokokMudharabah/$r->tenor)*$r->sisaTenor) ) ?></td>
+                                            <td><?= 'Rp. ' . number_format($r->bagiHasil*$r->tenor) ?></td>
                                             <td><?= 'Rp. ' . number_format(($r->bagiHasil*$r->sisaTenor)) ?></td>
-                                            <td><?= $r->tenor. 'x Panen' ?></td>
                                             <td><?= $r->sisaTenor. 'x Panen' ?></td>
                                             <td><?= date_indo($r->lastUpdate_p) ?></td>
                                         </tr>
@@ -114,25 +114,17 @@
 								<tr>
 									<th>No</th>
 									<th>ID Pinjaman</th>
+									<th>ID Anggota</th>
 									<th>Nama Anggota</th>
 									<th>Plafon</th>
 									<th>Pokok Rahn</th>
-									<th>Pokok Mudharabah</th>
-									<th>Bagi Hasil</th>
 									<th>O/S Rahn</th>
+									<th>Pokok Mudharabah</th>
 									<th>O/S Mudharabah</th>
+									<th>Bagi Hasil</th>
 									<th>O/S Bagi Hasil</th>
-									<th>Tenor Panen</th>
 									<th>Sisa Tenor</th>
-									<th>Angsuran Pokok</th>
-									<th>Bagi Hasil Perpanen</th>
 									<th>Tanggal Pengajuan</th>
-									<th>Panen Pertama</th>
-									<th>Panen Kedua</th>
-									<th>Panen Ketiga</th>
-									<th>Panen Keempat</th>
-									<th>Panen Kelima</th>
-									<th>AO Bertugas</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -141,26 +133,17 @@
                                         <tr>
                                             <td><?= $no++ ?></td>
                                             <td><?= $r->id_pinjaman ?></td>
-                                            <td><?= ucwords($r->namaAnggota) ?></td>
+                                            <td><?= $r->anggota_id ?></td>
+                                            <td><?= strtoupper($r->namaAnggota) ?></td>
                                             <td><?= $r->pokokRahn + $r->pokokMudharabah ?></td>
                                             <td><?= $r->pokokRahn ?></td>
-                                            <td><?= $r->pokokMudharabah ?></td>
-											<td><?= $r->bagiHasil*$r->tenor ?></td>
                                             <td><?= (($r->pokokRahn/$r->tenor)*$r->sisaTenor) ?></td>
+                                            <td><?= $r->pokokMudharabah ?></td>
                                             <td><?= (($r->pokokMudharabah/$r->tenor)*$r->sisaTenor)  ?></td>
+                                            <td><?= $r->bagiHasil*$r->tenor ?></td>
                                             <td><?= ($r->bagiHasil*$r->sisaTenor) ?></td>
-
-                                            <td><?= $r->tenor. 'x Panen' ?></td>
                                             <td><?= $r->sisaTenor. 'x Panen' ?></td>
-                                            <td><?= $r->pokokAngsuran ?></td>
-                                            <td><?= $r->bagiHasil ?></td>
-                                            <td><?= ($r->lastUpdate_p) ?></td>
-                                            <td><?= ($r->angsuranPertama) ?></td>
-                                            <td><?= ($r->angsuranKedua) ?></td>
-                                            <td><?= ($r->angsuranKetiga) ?></td>
-                                            <td><?= ($r->angsuranKeempat) ?></td>
-                                            <td><?= ($r->angsuranKelima) ?></td>
-                                            <td><?= ucwords($r->namaLengkap) ?></td>
+                                            <td><?= $r->lastUpdate_p ?></td>
                                         </tr>
                                     <?php } ?>
 							</tbody>

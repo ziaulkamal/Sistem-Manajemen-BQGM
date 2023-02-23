@@ -19,7 +19,7 @@
 							<h6 class="text-end mb-5 pb-4"># INV-<?= ucwords($data->id_rekening) ?></h6>
 
 							<h6 class="mb-0 mt-3 text-end fw-normal mb-2"><span class="text-muted">Tanggal Dikeluarkan :</span>
-								<?= date('Y-m-d') ?></h6>
+								<?= date_indo(date('Y-m-d')) ?></h6>
 							<h6 class="text-end fw-normal"><span class="text-muted">Tanggal Disetujui :</span> <?= date_indo(date('Y-m-d')) ?></h6>
 						</div>
 					</div>
@@ -38,20 +38,20 @@
 									<tr class="text-end">
 										<td class="text-start">1</td>
 										<td class="text-start">Simpanan Pokok</td>
-										<td><?= $data->s_pokok ?></td>
-										<td><?= $data->s_pokok ?></td>
+										<td><?= 'Rp. ' . number_format($data->s_pokok) ?></td>
+										<td><?= 'Rp. ' . number_format($data->s_pokok) ?></td>
 									</tr>
 									<tr class="text-end">
 										<td class="text-start">2</td>
 										<td class="text-start">Simpanan Wajib</td>
-										<td><?= $data->s_wajib ?></td>
-										<td><?= $data->s_wajib ?></td>
+										<td><?= 'Rp. ' . number_format($data->s_wajib) ?></td>
+										<td><?= 'Rp. ' . number_format($data->s_wajib) ?></td>
 									</tr>
 									<tr class="text-end">
 										<td class="text-start">3</td>
 										<td class="text-start">Simpanan Sukarela</td>
-										<td><?= $data->s_sukarela ?></td>
-										<td><?= $data->s_sukarela ?></td>
+										<td><?= 'Rp. ' . number_format($data->s_sukarela) ?></td>
+										<td><?= 'Rp. ' . number_format($data->s_sukarela) ?></td>
 									</tr>
 
 								</tbody>
@@ -66,7 +66,7 @@
 										<tbody>
 											<tr class="bg-light">
 												<td class="text-bold-800">Total Diserahkan</td>
-												<td class="text-bold-800 text-end"><?= $data->s_pokok + $data->s_wajib + $data->s_sukarela ?></td>
+												<td class="text-bold-800 text-end"><?= 'Rp. ' . number_format($data->s_pokok + $data->s_wajib + $data->s_sukarela) ?></td>
 											</tr>
 										</tbody>
 									</table>
@@ -77,8 +77,8 @@
 					<div class="container-fluid w-100">
 						<a type="button" onclick="closeAccount(<?= $data->id_rekening ?>);" class="btn btn-primary float-end mt-4 ms-2"><i data-feather="send"
 								class="me-3 icon-md"></i>Tutup Rekening</a>
-						<a href="javascript:;" class="btn btn-outline-primary float-end mt-4"><i data-feather="printer"
-								class="me-2 icon-md"></i>Print Invoice</a>
+						<!-- <a href="javascript:;" class="btn btn-outline-primary float-end mt-4"><i data-feather="printer"
+								class="me-2 icon-md"></i>Print Invoice</a> -->
 					</div>
 				</div>
 			</div>

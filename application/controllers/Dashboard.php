@@ -6,12 +6,11 @@ class Dashboard extends CI_Controller {
     public function __construct()
     {
         parent::__construct();
-        if ($this->session->userdata('status_login') != TRUE) {
-            
-            redirect('login');
-            
-        }
         $this->load->model('Dashboard_model','u');
+        if ($this->session->userdata('status_login') != TRUE) {
+            $this->session->set_flashdata('out', 'Anda Tidak Dibenarkan Mengakses Ini !');
+            redirect('login');
+        }
         
     }
 

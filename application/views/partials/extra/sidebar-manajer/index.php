@@ -60,6 +60,24 @@
             </li>
 
             <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="collapse" href="#pinjaman" role="button" aria-expanded="false" aria-controls="users">
+                <i class="link-icon" data-feather="thumbs-up"></i>
+                <span class="link-title">Pinjaman Karyawan</span>
+                <i class="link-arrow" data-feather="chevron-down"></i>
+              </a>
+              <div class="collapse" id="pinjaman">
+                <ul class="nav sub-menu">
+                  <li class="nav-item">
+                    <a href="<?= base_url('operasional/data_pinjaman') ?>" class="nav-link">Data Pinjaman</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="<?= base_url('operasional/pengajuan_pinjaman') ?>" class="nav-link">Tambah</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="nav-item">
               <a class="nav-link" data-bs-toggle="collapse" href="#approval" role="button" aria-expanded="false" aria-controls="users">
                 <i class="link-icon" data-feather="check-square"></i>
                 <span class="link-title">Approval</span>

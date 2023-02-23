@@ -110,6 +110,7 @@ $route['laporan/operasional/keluar/date/_lihat']                     = 'Laporan/
 $route['laporan/angsuran/pending/_lihat']                           = 'Laporan/Main/laporan_angsuranPending';
 $route['laporan/angsuran/pending/(:any)/_lihat']                    = 'Laporan/Main/laporan_angsuranPendings/$1';
 $route['laporan/tracking/_lihat']                                   = 'Laporan/Main/trackingSetoranAll';
+$route['laporan/tracking/date/_lihat']                               = 'Laporan/Main/trackingSetoranAll_frequency';
 
 
 /*----------------------------------------------------------------------------------------------------- */

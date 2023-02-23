@@ -150,6 +150,20 @@ class Laporan_model extends CI_Model
         return $this->db->get('bq_transaksi');
     }
 
+    function getSetoranOnly_sort($dateFrom, $dateWhere)
+    {
+        $this->db->where_in('type', ['simpok', 'simwa', 'simka']);
+        $this->db->where('kodeRelasi', 'teller');
+        $this->db->where('lastUpdate_t >=', $dateFrom);
+        $this->db->where('lastUpdate_t <=', $dateWhere);
+        $this->db->join('bq_anggota', 'bq_anggota.id_anggota = bq_transaksi.is_anggota');
+        
+        $this->db->order_by('bq_transaksi.is_anggota', 'ASC');
+        $this->db->order_by('id_transaksi', 'DESC');
+        
+        return $this->db->get('bq_transaksi');
+    }
+
     function getPlafonByPinjamanId($id)
     {
         $this->db->where('id_pinjaman', $id);

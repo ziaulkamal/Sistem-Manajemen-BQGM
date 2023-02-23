@@ -18,7 +18,7 @@
 			<div class="card">
 				<div class="card-body">
 					<h4 class="card-title"><?= $title ?></h4>
-					<form class="forms-sample" action="<?= base_url('laporan/operasional/keluar/date/_lihat') ?>" method="POST"
+					<form class="forms-sample" action="<?= base_url('laporan/tracking/date/_lihat') ?>" method="POST"
 						enctype="multipart/form-data">
 						<div class="row mb-3">
 							<div class="col-md-3">
@@ -101,12 +101,13 @@
                                     foreach ($data as $r) { ?>
                                         <tr>
                                             <td><?= $no++ ?></td>
-                                            <td><?= strtoupper($r->id_anggota) ?></td>
+                                            <td><?= $r->serialNumber ?></td>
+                                            <td><?= $r->is_anggota ?></td>
                                             <td><?= strtoupper($r->namaAnggota) ?></td>
-                                            <td><?= ucwords($r->type) ?></td>
+                                            <td><?= strtoupper($r->type) ?></td>
                                             <td><?= $r->nilaiTransaksi ?></td>
 
-                                            <td><?= date_indo($r->lastUpdate_t) ?></td>
+                                            <td><?= $r->lastUpdate_t ?></td>
                                         </tr>
                                     <?php } ?>
 							</tbody>
@@ -123,7 +124,7 @@
         }
 		
 		function backTo() {
-			window.location.href= "<?= base_url('laporan/operasional/keluar/_lihat') ?>"
+			window.location.href= "<?= base_url('laporan/tracking/_lihat') ?>"
 		}
 
     </script>

@@ -8,6 +8,7 @@ class Config extends CI_Controller {
         parent::__construct();
         $this->load->model('Config_model', 'msconfig');
         
+        
         // if ($this->session->userdata('level_akses') != 'manajer') {
             
         //     redirect('/','refresh');
@@ -37,6 +38,10 @@ class Config extends CI_Controller {
 
     function updateProfil($id)
     {
+        if ($this->session->userdata('status_login') != TRUE) {
+            $this->session->set_flashdata('out', 'Anda Tidak Dibenarkan Mengakses Ini !');
+            redirect('login');
+        }
         $real_id = $this->session->userdata('id');
 
         if ($id == $real_id) {
@@ -56,6 +61,10 @@ class Config extends CI_Controller {
 
     function processUpdateProfil($id)
     {
+        if ($this->session->userdata('status_login') != TRUE) {
+            $this->session->set_flashdata('out', 'Anda Tidak Dibenarkan Mengakses Ini !');
+            redirect('login');
+        }
         $config = array(
             'allowed_types' => 'jpg|png|jpeg|webp',
             'max_size'      => 10000,
@@ -94,6 +103,10 @@ class Config extends CI_Controller {
 
     function setup_master()
     {
+        if ($this->session->userdata('status_login') != TRUE) {
+            $this->session->set_flashdata('out', 'Anda Tidak Dibenarkan Mengakses Ini !');
+            redirect('login');
+        }
         $load = $this->msconfig->get_master()->result();
         $data = array(
             'title' => 'Konfigurasi Aplikasi', 
@@ -130,6 +143,10 @@ class Config extends CI_Controller {
 
     function edit_master($id)
     {
+        if ($this->session->userdata('status_login') != TRUE) {
+            $this->session->set_flashdata('out', 'Anda Tidak Dibenarkan Mengakses Ini !');
+            redirect('login');
+        }
         $load        = $this->msconfig->get_master()->result();
         $load_single = $this->msconfig->select_single_master($id);
         $data = array(
@@ -144,6 +161,10 @@ class Config extends CI_Controller {
 
     function update_master($id)
     {
+        if ($this->session->userdata('status_login') != TRUE) {
+            $this->session->set_flashdata('out', 'Anda Tidak Dibenarkan Mengakses Ini !');
+            redirect('login');
+        }
         $this->_rules('setup_master');
         if ($this->form_validation->run() == FALSE) {
            
@@ -166,6 +187,10 @@ class Config extends CI_Controller {
 
     function delete_master($id)
     {
+        if ($this->session->userdata('status_login') != TRUE) {
+            $this->session->set_flashdata('out', 'Anda Tidak Dibenarkan Mengakses Ini !');
+            redirect('login');
+        }
        $this->msconfig->delete_master($id);
        $this->session->set_flashdata('msg', 'berhasil menghapus data !');
        redirect('konfigurasi');

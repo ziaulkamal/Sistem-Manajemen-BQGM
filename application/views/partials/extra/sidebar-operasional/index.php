@@ -51,39 +51,21 @@
               <div class="collapse" id="logs">
                 <ul class="nav sub-menu">
                   <li class="nav-item">
-                    <a href="<?= base_url ('log/pembiayaan_sawah') ?>" class="nav-link">Pembiayaan Sawah</a>
+                    <a href="<?= base_url ('log/unit/pembiayaan') ?>" class="nav-link">Transaksi Pembiayaan</a>
                   </li>
                   <li class="nav-item">
                     <a href="<?= base_url ('log/transaksi_operasional') ?>" class="nav-link">Transaksi Operasional</a>
                   </li>
                   <li class="nav-item">
-                    <a href="<?= base_url ('log/transaksi_teller') ?>" class="nav-link">Transaksi Setor Angsuran</a>
+                    <a href="<?= base_url ('log/unit/teller') ?>" class="nav-link">Transaksi Teller</a>
                   </li>
-                  <li class="nav-item">
-                    <a href="<?= base_url ('log/transaksi_teller') ?>" class="nav-link">Transaksi Setor Simpanan</a>
-                  </li>
+  
 
                 </ul>
               </div>
             </li>
 
-            <li class="nav-item">
-              <a class="nav-link" data-bs-toggle="collapse" href="#pinjaman" role="button" aria-expanded="false" aria-controls="users">
-                <i class="link-icon" data-feather="thumbs-up"></i>
-                <span class="link-title">Pinjaman Karyawan</span>
-                <i class="link-arrow" data-feather="chevron-down"></i>
-              </a>
-              <div class="collapse" id="pinjaman">
-                <ul class="nav sub-menu">
-                  <li class="nav-item">
-                    <a href="<?= base_url('operasional/data_pinjaman') ?>" class="nav-link">Data Pinjaman</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="<?= base_url('operasional/pengajuan_pinjaman') ?>" class="nav-link">Tambah</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
+
 
             <li class="nav-item">
               <a class="nav-link" data-bs-toggle="collapse" href="#approval" role="button" aria-expanded="false" aria-controls="users">

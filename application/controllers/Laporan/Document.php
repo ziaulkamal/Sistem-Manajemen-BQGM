@@ -11,7 +11,10 @@ class Document extends CI_Controller {
         parent::__construct();
         $this->load->model('Document_model','d');
         $this->load->model('Internal_model','m');
-        
+        if ($this->session->userdata('status_login') != TRUE) {
+            $this->session->set_flashdata('out', 'Anda Tidak Dibenarkan Mengakses Ini !');
+            redirect('login');
+        }
         
     }
 

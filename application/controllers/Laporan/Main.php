@@ -7,7 +7,10 @@ class Main extends CI_Controller {
     {
         parent::__construct();
         $this->load->model('Laporan_model', 'l');
-        
+        if ($this->session->userdata('status_login') != TRUE) {
+            $this->session->set_flashdata('out', 'Anda Tidak Dibenarkan Mengakses Ini !');
+            redirect('login');
+        }
     }
 
     function laporan_simpanan()
@@ -182,6 +185,21 @@ class Main extends CI_Controller {
     {
 
         $load = $this->l->getSetoranOnly()->result();
+        $data = array(
+            'title'     => 'Laporan Setoran (Group)', 
+            'page'      => 'pages/laporan/laporan_setoran_group',
+            'data'      => $load
+        );
+        
+        $this->load->view ('index', $data);
+    }
+
+    function trackingSetoranAll_frequency()
+    {
+        $dateFrom   = $this->input->post('s');
+        $dateWhere  = $this->input->post('e');
+
+        $load = $this->l->getSetoranOnly_sort($dateFrom, $dateWhere)->result();
         $data = array(
             'title'     => 'Laporan Setoran (Group)', 
             'page'      => 'pages/laporan/laporan_setoran_group',

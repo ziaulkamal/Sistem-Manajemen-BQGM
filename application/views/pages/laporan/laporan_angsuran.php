@@ -53,6 +53,7 @@
 								<tr>
 									<th>No</th>
 									<th>Nomor Transaksi</th>
+									<th>ID Anggota</th>
 									<th>Nama Anggota</th>
 									<th>Plafond</th>
 									<th>Nominal Transaksi</th>
@@ -65,6 +66,7 @@
                                         <tr>
                                             <td><?= $no++ ?></td>
                                             <td><?= $r->serialNumber ?></td>
+                                            <td><?= $r->is_anggota ?></td>
                                             <td><?= ucwords($r->namaAnggota) ?></td>
                                             <td><?= 'Rp. ' .number_format($this->l->getPlafonByPinjamanId($r->pinjaman_id)->plafon) ?></td>
                                             <td><?= 'Rp. ' .number_format($r->nilaiTransaksi) ?></td>
@@ -91,9 +93,10 @@
 			<tr>
 				<th>No</th>
 				<th>Nomor Transaksi</th>
+				<th>ID Anggota</th>
 				<th>Nama Anggota</th>
-				<th>Keterangan</th>
-				<th>Nilai Transaksi</th>
+				<th>Plafond</th>
+				<th>Nominal Transaksi</th>
 				<th>Tanggal</th>
 			</tr>
 		</thead>
@@ -103,10 +106,11 @@
 					<tr>
 						<td><?= $no++ ?></td>
 						<td><?= $r->serialNumber ?></td>
-						<td><?= ucwords($r->namaAnggota) ?></td>
-						<td><?= ucwords($r->keterangan) ?></td>
+						<td><?= $r->is_anggota ?></td>
+						<td><?= strtoupper($r->namaAnggota) ?></td>
+						<td><?= $this->l->getPlafonByPinjamanId($r->pinjaman_id)->plafon ?></td>
 						<td><?= $r->nilaiTransaksi ?></td>
-						<td><?= date_indo($r->lastUpdate_t) ?></td>
+						<td><?= $r->lastUpdate_t ?></td>
 					</tr>
 				<?php } ?>
 		</tbody>
