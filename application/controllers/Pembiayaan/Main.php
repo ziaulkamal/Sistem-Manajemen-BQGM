@@ -667,15 +667,11 @@ class Main extends CI_Controller {
                 $this->form_validation->set_rules('fileThree', 'Foto Pendukung', 'trim');
                 $this->form_validation->set_rules('luas_sawah_x', '', 'trim');
                 $this->form_validation->set_rules('satuan_sawah_x', '', 'trim');
-                $this->form_validation->set_rules('luas_sawah_y', '', 'trim|required',array(
-                    'required'  => 'Area ini harus di isi !'
-                ));
+                $this->form_validation->set_rules('luas_sawah_y', '', 'trim');
                 $this->form_validation->set_rules('luas_sawah_z', '', 'trim|required',array(
                     'required'  => 'Area ini harus di isi !'
                 ));
-                $this->form_validation->set_rules('satuan_sawah_y', 'Satuan', 'trim|required',array(
-                    'required'  => '%s Harus di pilih !'
-                ));
+                $this->form_validation->set_rules('satuan_sawah_y', 'Satuan', 'trim');
                 $this->form_validation->set_rules('satuan_sawah_z', 'Satuan', 'trim|required',array(
                     'required'  => '%s Harus di pilih !'
                 ));

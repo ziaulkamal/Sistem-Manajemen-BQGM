@@ -99,7 +99,7 @@
 									foreach ($table as $r) { ?>
 									<tr class="table-info">
 										<td><?= ucwords($r->keterangan) ?></td>
-										<td><?= $r->lastUpdate_t ?></td>
+										<td><?= longdate_indo($r->lastUpdate_t) ?></td>
 									</tr>
 									<?php } ?>
 							</tbody>

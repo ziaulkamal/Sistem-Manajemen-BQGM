@@ -268,7 +268,7 @@ class Main extends CI_Controller {
         }
 
         $setUpdate = array(
-            'lastUpdate' => date('Y-m-d'), 
+            'lastUpdate_t' => date('Y-m-d'), 
             'printInvoice' => $load->printInvoice + 1
         );
         $this->m->updateBySerial($serial, $setUpdate);
@@ -364,6 +364,7 @@ class Main extends CI_Controller {
                 'is_anggota'        => $load->anggota_id, 
                 'kodeRelasi'        => $this->session->userdata('level_akses'), 
                 'lastUpdate_t'        => date('Y-m-d'), 
+                'pinjaman_id'       => $id,
             );
 
             
@@ -395,6 +396,7 @@ class Main extends CI_Controller {
                 'is_anggota'        => $load->anggota_id, 
                 'kodeRelasi'        => $this->session->userdata('level_akses'), 
                 'lastUpdate_t'        => date('Y-m-d'), 
+                'pinjaman_id'       => $id,
             );
 
             $data2 = array(

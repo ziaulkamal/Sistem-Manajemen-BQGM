@@ -23,7 +23,7 @@
 							<div class="col-md-6">
 								<div class="mb-3">
 									<label class="form-label">Nama Lengkap</label>
-									<input type="text" class="form-control" name="nama"
+									<input type="text" class="form-control"  autocomplete="off" name="nama"
 										value="<?= set_value('nama') ?>">
 									<?= form_error('nama', '<small class="text-danger">', '</small>') ?>
 								</div>
@@ -31,7 +31,7 @@
 							<div class="col-md-3">
 								<div class="mb-3">
 									<label class="form-label">NIK/SIM</label>
-									<input type="text" class="form-control" name="nik"
+									<input type="text" class="form-control"  autocomplete="off" name="nik"
 										value="<?= set_value('nik') ?>"  onkeypress="return hanyaAngka(event)">
 									<?= form_error('nik', '<small class="text-danger">', '</small>') ?>
 								</div>
@@ -39,7 +39,7 @@
 							<div class="col-md-3">
 								<div class="mb-3">
 									<label class="form-label">Masa Berlaku</label>
-									<input type="text" class="form-control" name="masa_ktp"
+									<input type="text" class="form-control"  autocomplete="off" name="masa_ktp"
 										value="<?= set_value('masa_ktp') ?>">
 									<?= form_error('masa_ktp', '<small class="text-danger">', '</small>') ?>
 								</div>
@@ -50,7 +50,7 @@
 							<div class="col-md-3">
 								<div class="mb-3">
 									<label class="form-label">Tempat Lahir</label>
-									<input type="text" class="form-control" name="tp_lahir"
+									<input type="text" class="form-control"  autocomplete="off" name="tp_lahir"
 										value="<?= set_value('tp_lahir') ?>">
 									<?= form_error('tp_lahir', '<small class="text-danger">', '</small>') ?>
 								</div>
@@ -66,7 +66,7 @@
 							<div class="col-md-3">
 								<div class="mb-3">
 									<label class="form-label">No Telepon</label>
-									<input type="text" class="form-control" name="no_hp"
+									<input type="text" class="form-control"  autocomplete="off" name="no_hp"
 										value="<?= set_value('no_hp') ?>"  onkeypress="return hanyaAngka(event)">
 									<?= form_error('no_hp', '<small class="text-danger">', '</small>') ?>
 								</div>
@@ -74,7 +74,7 @@
 							<div class="col-md-3">
 								<div class="mb-3">
 									<label class="form-label">Alamat KTP</label>
-									<input type="text" class="form-control" name="alamat_ktp"
+									<input type="text" class="form-control"  autocomplete="off" name="alamat_ktp"
 										value="<?= set_value('alamat_ktp') ?>">
 									<?= form_error('alamat_ktp', '<small class="text-danger">', '</small>') ?>
 								</div>
@@ -85,7 +85,7 @@
 							<div class="col-md-3">
 								<div class="mb-3">
 									<label class="form-label">Alamat Sekarang</label>
-									<input type="text" class="form-control" name="alamat_sekarang"
+									<input type="text" class="form-control"  autocomplete="off" name="alamat_sekarang"
 										value="<?= set_value('alamat_sekarang') ?>">
 									<?= form_error('alamat_sekarang', '<small class="text-danger">', '</small>') ?>
 								</div>
@@ -316,7 +316,7 @@
 							<div class="col-md-3">
 								<div class="mb-3">
 									<label class="form-label">Pekerjaan</label>
-									<input type="text" class="form-control" name="pekerjaan"
+									<input type="text" class="form-control"  autocomplete="off" name="pekerjaan"
 										value="<?= set_value('pekerjaan') ?>">
 									<?= form_error('pekerjaan', '<small class="text-danger">', '</small>') ?>
 								</div>
@@ -525,14 +525,14 @@
 							<div class="col-md-6">
 								<div class="mb-3">
 									<label class="form-label">Nama Pasangan</label>
-									<input type="text" class="form-control" name="nama_pasangan"
+									<input type="text" class="form-control"  autocomplete="off" name="nama_pasangan"
 										value="<?= set_value('nama_pasangan') ?>">
 								</div>
 							</div>
 							<div class="col-md-3">
 								<div class="mb-3">
 									<label class="form-label">NIK Pasangan</label>
-									<input type="text" class="form-control" name="nik_pasangan"
+									<input type="text" class="form-control"  autocomplete="off" name="nik_pasangan"
 										value="<?= set_value('nik_pasangan') ?>"  onkeypress="return hanyaAngka(event)">
 								</div>
 							</div>
@@ -543,7 +543,7 @@
 							<div class="col-md-3">
 								<div class="mb-3">
 									<label class="form-label">Tempat Lahir Pasangan</label>
-									<input type="text" class="form-control" name="tl_lahir_pasangan"
+									<input type="text" class="form-control"  autocomplete="off" name="tl_lahir_pasangan"
 										value="<?= set_value('tl_lahir_pasangan') ?>">
 								</div>
 							</div>
@@ -557,7 +557,7 @@
 							<div class="col-md-3">
 								<div class="mb-3">
 									<label class="form-label">No Telepon Lainya</label>
-									<input type="text" class="form-control" name="no_hp_lain"
+									<input type="text" class="form-control"  autocomplete="off" name="no_hp_lain"
 										value="<?= set_value('no_hp_lain') ?>"  onkeypress="return hanyaAngka(event)">
 								</div>
 							</div>
@@ -567,7 +567,7 @@
 							<div class="col-md-6">
 								<div class="mb-3">
 									<label class="form-label">Nama Ibu Kandung</label>
-									<input type="text" class="form-control" name="nama_ibu"
+									<input type="text" class="form-control"  autocomplete="off" name="nama_ibu"
 										value="<?= set_value('nama_ibu') ?>">
 									<?= form_error('nama_ibu', '<small class="text-danger">', '</small>') ?>
 								</div>
@@ -633,7 +633,7 @@
 							<div class="col-md-6">
 								<div class="mb-3">
 									<label class="form-label">Nama Lengkap</label>
-									<input type="text" class="form-control" name="nama"
+									<input type="text" class="form-control"  autocomplete="off" name="nama"
 										value="<?= $form->namaAnggota ?>">
 									<?= form_error('nama', '<small class="text-danger">', '</small>') ?>
 								</div>
@@ -641,7 +641,7 @@
 							<div class="col-md-3">
 								<div class="mb-3">
 									<label class="form-label">NIK/SIM</label>
-									<input type="text" class="form-control" name="nik"
+									<input type="text" class="form-control"  autocomplete="off" name="nik"
 										value="<?= $form->nik ?>"  onkeypress="return hanyaAngka(event)">
 									<?= form_error('nik', '<small class="text-danger">', '</small>') ?>
 								</div>
@@ -649,7 +649,7 @@
 							<div class="col-md-3">
 								<div class="mb-3">
 									<label class="form-label">Masa Berlaku</label>
-									<input type="text" class="form-control" name="masa_ktp"
+									<input type="text" class="form-control"  autocomplete="off" name="masa_ktp"
 										value="<?= $form->masaKtp ?>">
 									<?= form_error('masa_ktp', '<small class="text-danger">', '</small>') ?>
 								</div>
@@ -660,7 +660,7 @@
 							<div class="col-md-3">
 								<div class="mb-3">
 									<label class="form-label">Tempat Lahir</label>
-									<input type="text" class="form-control" name="tp_lahir"
+									<input type="text" class="form-control"  autocomplete="off" name="tp_lahir"
 										value="<?= $form->tempatLahir ?>">
 									<?= form_error('tp_lahir', '<small class="text-danger">', '</small>') ?>
 								</div>
@@ -676,7 +676,7 @@
 							<div class="col-md-3">
 								<div class="mb-3">
 									<label class="form-label">No Telepon</label>
-									<input type="text" class="form-control" name="no_hp"
+									<input type="text" class="form-control"  autocomplete="off" name="no_hp"
 										value="<?= $form->no_hp ?>"  onkeypress="return hanyaAngka(event)">
 									<?= form_error('no_hp', '<small class="text-danger">', '</small>') ?>
 								</div>
@@ -684,7 +684,7 @@
 							<div class="col-md-3">
 								<div class="mb-3">
 									<label class="form-label">Alamat KTP</label>
-									<input type="text" class="form-control" name="alamat_ktp"
+									<input type="text" class="form-control"  autocomplete="off" name="alamat_ktp"
 										value="<?= $form->alamatKtp ?>">
 									<?= form_error('alamat_ktp', '<small class="text-danger">', '</small>') ?>
 								</div>
@@ -695,7 +695,7 @@
 							<div class="col-md-3">
 								<div class="mb-3">
 									<label class="form-label">Alamat Sekarang</label>
-									<input type="text" class="form-control" name="alamat_sekarang"
+									<input type="text" class="form-control"  autocomplete="off" name="alamat_sekarang"
 										value="<?= $form->alamatSekarang ?>">
 									<?= form_error('alamat_sekarang', '<small class="text-danger">', '</small>') ?>
 								</div>
@@ -1018,7 +1018,7 @@
 							<div class="col-md-3">
 								<div class="mb-3">
 									<label class="form-label">Pekerjaan</label>
-									<input type="text" class="form-control" name="pekerjaan"
+									<input type="text" class="form-control"  autocomplete="off" name="pekerjaan"
 										value="<?= $form->pekerjaan ?>">
 									<?= form_error('pekerjaan', '<small class="text-danger">', '</small>') ?>
 								</div>
@@ -1357,14 +1357,14 @@
 							<div class="col-md-6">
 								<div class="mb-3">
 									<label class="form-label">Nama Pasangan</label>
-									<input type="text" class="form-control" name="nama_pasangan"
+									<input type="text" class="form-control"  autocomplete="off" name="nama_pasangan"
 										value="<?= $form->namaPasangan ?>">
 								</div>
 							</div>
 							<div class="col-md-3">
 								<div class="mb-3">
 									<label class="form-label">NIK Pasangan</label>
-									<input type="text" class="form-control" name="nik_pasangan"
+									<input type="text" class="form-control"  autocomplete="off" name="nik_pasangan"
 										value="<?= $form->nikPasangan ?>"  onkeypress="return hanyaAngka(event)">
 								</div>
 							</div>
@@ -1375,7 +1375,7 @@
 							<div class="col-md-3">
 								<div class="mb-3">
 									<label class="form-label">Tempat Lahir Pasangan</label>
-									<input type="text" class="form-control" name="tl_lahir_pasangan"
+									<input type="text" class="form-control"  autocomplete="off" name="tl_lahir_pasangan"
 										value="<?= $form->tlPasangan ?>">
 								</div>
 							</div>
@@ -1389,7 +1389,7 @@
 							<div class="col-md-3">
 								<div class="mb-3">
 									<label class="form-label">No Telepon Lainya</label>
-									<input type="text" class="form-control" name="no_hp_lain"
+									<input type="text" class="form-control"  autocomplete="off" name="no_hp_lain"
 										value="<?= $form->noHpPasangan ?>"  onkeypress="return hanyaAngka(event)">
 								</div>
 							</div>
@@ -1399,7 +1399,7 @@
 							<div class="col-md-6">
 								<div class="mb-3">
 									<label class="form-label">Nama Ibu Kandung</label>
-									<input type="text" class="form-control" name="nama_ibu"
+									<input type="text" class="form-control"  autocomplete="off" name="nama_ibu"
 										value="<?= $form->namaIbu ?>">
 									<?= form_error('nama_ibu', '<small class="text-danger">', '</small>') ?>
 								</div>

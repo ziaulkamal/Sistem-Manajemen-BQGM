@@ -112,7 +112,8 @@
               <div class="collapse" id="laporan">
                 <ul class="nav sub-menu">
                   <li class="nav-item">
-                    <a href="<?= base_url('laporan/simpanan/_lihat') ?>" class="nav-link">Simpanan Anggota</a>
+                    <a href="<?= base_url('laporan/simpanan/_lihat') ?>" class="nav-link">Simpok/Simwa/Simka</a>
+                    <a href="<?= base_url('laporan/tracking/_lihat') ?>" class="nav-link">Cetak</a>
                   </li>
                   <li class="nav-item">
                     <a href="<?= base_url('laporan/angsuran/_lihat') ?>" class="nav-link">Angsuran Anggota</a>
@@ -129,9 +130,7 @@
                   <li class="nav-item">
                     <a href="<?= base_url('laporan/operasional/keluar/_lihat') ?>" class="nav-link">Operasional (Keluar)</a>
                   </li>
-                  <li class="nav-item">
-                    <a href="<?= base_url('laporan/tracking/_lihat') ?>" class="nav-link">Lacak Setoran Anggota</a>
-                  </li>
+
   
   
                 </ul>

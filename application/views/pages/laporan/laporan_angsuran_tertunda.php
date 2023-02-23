@@ -40,7 +40,8 @@
                             $dateNow = strtotime(date('Y-m-d'));
                             $no = 1;
                             foreach ($data as $r ) {
-                            if ($r->tenor == 5 && $r->sisaTenor == 5 && !empty($r->ansuranKelima)) { 
+
+                            if ($r->tenor == 5 && $r->sisaTenor == 5 ) { 
                             if ($dateNow >= strtotime($r->angsuranPertama)) { ?>
                             <tr>
                             <td><?= $no++ ?></td>
@@ -53,7 +54,7 @@
                             <td><?= date_indo($r->angsuranPertama) ?></td>
                             <td><?= ucwords($r->namaLengkap) ?></td>
                             </tr>
-                            <?php }}elseif ($r->tenor == 4 && $r->sisaTenor == 4 && !empty($r->angsuranKeempat)) { 
+                            <?php }}elseif ($r->tenor == 4 && $r->sisaTenor == 4 ) { 
 
                             if ( $dateNow >= strtotime($r->angsuranPertama)) { ?><tr>
                             <td><?= $no++ ?></td>
@@ -66,7 +67,7 @@
                             <td><?= date_indo($r->angsuranPertama) ?></td>
                             <td><?= ucwords($r->namaLengkap) ?></td>
                             </tr>
-                            <?php }}elseif ($r->tenor == 3 && $r->sisaTenor == 3 && !empty($r->angsuranKetiga)) { 
+                            <?php }}elseif ($r->tenor == 3 && $r->sisaTenor == 3 ) { 
 
                             if ( $dateNow >= strtotime($r->angsuranPertama)) { ?><tr>
                             <td><?= $no++ ?></td>
@@ -79,7 +80,7 @@
                             <td><?= date_indo($r->angsuranPertama) ?></td>
                             <td><?= ucwords($r->namaLengkap) ?></td>
                             </tr>
-                            <?php }}elseif ($r->tenor == 2 && $r->sisaTenor == 2 && !empty($r->angsuranKedua)) { 
+                            <?php }}elseif ($r->tenor == 2 && $r->sisaTenor == 2 ) { 
 
                             if ( $dateNow >= strtotime($r->angsuranPertama)) { ?><tr>
                             <td><?= $no++ ?></td>
@@ -92,7 +93,7 @@
                             <td><?= date_indo($r->angsuranPertama) ?></td>
                             <td><?= ucwords($r->namaLengkap) ?></td>
                             </tr>
-                            <?php }}elseif ($r->tenor == 1 && $r->sisaTenor == 1 && !empty($r->angsuranPertama)) { 
+                            <?php }}elseif ($r->tenor == 1 && $r->sisaTenor == 1 ) { 
 
                             if ( $dateNow >= strtotime($r->angsuranPertama)) { ?><tr>
                             <td><?= $no++ ?></td>
@@ -107,7 +108,7 @@
                             </tr>
                             <?php }}
 
-                            if ($r->tenor == 5 && $r->sisaTenor == 4 && !empty($r->ansuranKelima)) { 
+                            if ($r->tenor == 5 && $r->sisaTenor == 4 ) { 
                             if ( $dateNow >= strtotime($r->angsuranKedua)) { ?><tr>
                             <td><?= $no++ ?></td>
                             <td><?= $r->id_pinjaman ?></td>
@@ -119,7 +120,7 @@
                             <td><?= date_indo($r->angsuranKedua) ?></td>
                             <td><?= ucwords($r->namaLengkap) ?></td>
                             </tr>
-                            <?php }}elseif ($r->tenor == 4 && $r->sisaTenor == 3 && !empty($r->angsuranKeempat)) { 
+                            <?php }}elseif ($r->tenor == 4 && $r->sisaTenor == 3 ) { 
 
                             if ( $dateNow >= strtotime($r->angsuranKedua)) { ?><tr>
                             <td><?= $no++ ?></td>
@@ -132,7 +133,7 @@
                             <td><?= date_indo($r->angsuranKedua) ?></td>
                             <td><?= ucwords($r->namaLengkap) ?></td>
                             </tr>
-                            <?php }}elseif ($r->tenor == 3 && $r->sisaTenor == 2 && !empty($r->angsuranKetiga)) { 
+                            <?php }}elseif ($r->tenor == 3 && $r->sisaTenor == 2 ) { 
 
                             if ( $dateNow >= strtotime($r->angsuranKedua)) { ?><tr>
                             <td><?= $no++ ?></td>
@@ -145,7 +146,7 @@
                             <td><?= date_indo($r->angsuranKedua) ?></td>
                             <td><?= ucwords($r->namaLengkap) ?></td>
                             </tr>
-                            <?php }}elseif ($r->tenor == 2 && $r->sisaTenor == 1 && !empty($r->angsuranKedua)) { 
+                            <?php }}elseif ($r->tenor == 2 && $r->sisaTenor == 1 ) { 
 
                             if ( $dateNow >= strtotime($r->angsuranKedua)) { ?><tr>
                             <td><?= $no++ ?></td>
@@ -160,7 +161,7 @@
                             </tr>
                             <?php }}
 
-                            if ($r->tenor == 5 && $r->sisaTenor == 3 && !empty($r->ansuranKelima)) { 
+                            if ($r->tenor == 5 && $r->sisaTenor == 3 ) { 
 
                             if ( $dateNow >= strtotime($r->angsuranKetiga)) { ?><tr>
                             <td><?= $no++ ?></td>
@@ -173,7 +174,7 @@
                             <td><?= date_indo($r->angsuranKetiga) ?></td>
                             <td><?= ucwords($r->namaLengkap) ?></td>
                             </tr>
-                            <?php }}elseif ($r->tenor == 4 && $r->sisaTenor == 3 && !empty($r->angsuranKeempat)) { 
+                            <?php }}elseif ($r->tenor == 4 && $r->sisaTenor == 3 ) { 
 
                             if ( $dateNow >= strtotime($r->angsuranKetiga)) { ?><tr>
                             <td><?= $no++ ?></td>
@@ -186,7 +187,7 @@
                             <td><?= date_indo($r->angsuranKetiga) ?></td>
                             <td><?= ucwords($r->namaLengkap) ?></td>
                             </tr>
-                            <?php }}elseif ($r->tenor == 3 && $r->sisaTenor == 2 && !empty($r->angsuranKetiga)) { 
+                            <?php }}elseif ($r->tenor == 3 && $r->sisaTenor == 2 ) { 
 
                             if ( $dateNow >= strtotime($r->angsuranKetiga)) { ?><tr>
                             <td><?= $no++ ?></td>
@@ -201,7 +202,7 @@
                             </tr>
                             <?php }}
 
-                            if ($r->tenor == 5 && $r->sisaTenor == 2 && !empty($r->ansuranKelima)) { 
+                            if ($r->tenor == 5 && $r->sisaTenor == 2 ) { 
 
                             if ( $dateNow >= strtotime($r->angsuranKeempat)) { ?><tr>
                             <td><?= $no++ ?></td>
@@ -214,7 +215,7 @@
                             <td><?= date_indo($r->angsuranKeempat) ?></td>
                             <td><?= ucwords($r->namaLengkap) ?></td>
                             </tr>
-                            <?php }}elseif ($r->tenor == 4 && $r->sisaTenor == 1 && !empty($r->angsuranKeempat)) { 
+                            <?php }}elseif ($r->tenor == 4 && $r->sisaTenor == 1 ) { 
 
                             if ( $dateNow >= strtotime($r->angsuranKeempat)) { ?><tr>
                             <td><?= $no++ ?></td>
@@ -229,7 +230,7 @@
                             </tr>
                             <?php }}
 
-                            if ($r->tenor == 5 && $r->sisaTenor == 1 && !empty($r->ansuranKelima)) { 
+                            if ($r->tenor == 5 && $r->sisaTenor == 1 ) { 
 
                             if ( $dateNow >= strtotime($r->ansuranKelima)) { ?>
                             <td><?= $r->id_pinjaman ?></td>
@@ -278,7 +279,7 @@
                             $dateNow = strtotime(date('Y-m-d'));
                             $no = 1;
                             foreach ($data as $r ) {
-                            if ($r->tenor == 5 && $r->sisaTenor == 5 && !empty($r->ansuranKelima)) { 
+                            if ($r->tenor == 5 && $r->sisaTenor == 5 ) { 
                             if ($dateNow >= strtotime($r->angsuranPertama)) { ?>
                             <tr>
                             <td><?= $no++ ?></td>
@@ -291,7 +292,7 @@
                             <td><?= $r->angsuranPertama ?></td>
                             <td><?= ucwords($r->namaLengkap) ?></td>
                             </tr>
-                            <?php }}elseif ($r->tenor == 4 && $r->sisaTenor == 4 && !empty($r->angsuranKeempat)) { 
+                            <?php }}elseif ($r->tenor == 4 && $r->sisaTenor == 4 ) { 
 
                             if ( $dateNow >= strtotime($r->angsuranPertama)) { ?><tr>
                             <td><?= $no++ ?></td>
@@ -304,7 +305,7 @@
                             <td><?= $r->angsuranPertama ?></td>
                             <td><?= ucwords($r->namaLengkap) ?></td>
                             </tr>
-                            <?php }}elseif ($r->tenor == 3 && $r->sisaTenor == 3 && !empty($r->angsuranKetiga)) { 
+                            <?php }}elseif ($r->tenor == 3 && $r->sisaTenor == 3 ) { 
 
                             if ( $dateNow >= strtotime($r->angsuranPertama)) { ?><tr>
                             <td><?= $no++ ?></td>
@@ -317,7 +318,7 @@
                             <td><?= $r->angsuranPertama ?></td>
                             <td><?= ucwords($r->namaLengkap) ?></td>
                             </tr>
-                            <?php }}elseif ($r->tenor == 2 && $r->sisaTenor == 2 && !empty($r->angsuranKedua)) { 
+                            <?php }}elseif ($r->tenor == 2 && $r->sisaTenor == 2 ) { 
 
                             if ( $dateNow >= strtotime($r->angsuranPertama)) { ?><tr>
                             <td><?= $no++ ?></td>
@@ -345,7 +346,7 @@
                             </tr>
                             <?php }}
 
-                            if ($r->tenor == 5 && $r->sisaTenor == 4 && !empty($r->ansuranKelima)) { 
+                            if ($r->tenor == 5 && $r->sisaTenor == 4 ) { 
                             if ( $dateNow >= strtotime($r->angsuranKedua)) { ?><tr>
                             <td><?= $no++ ?></td>
                             <td><?= $r->id_pinjaman ?></td>
@@ -357,7 +358,7 @@
                             <td><?= $r->angsuranKedua ?></td>
                             <td><?= ucwords($r->namaLengkap) ?></td>
                             </tr>
-                            <?php }}elseif ($r->tenor == 4 && $r->sisaTenor == 3 && !empty($r->angsuranKeempat)) { 
+                            <?php }}elseif ($r->tenor == 4 && $r->sisaTenor == 3 ) { 
 
                             if ( $dateNow >= strtotime($r->angsuranKedua)) { ?><tr>
                             <td><?= $no++ ?></td>
@@ -370,7 +371,7 @@
                             <td><?= $r->angsuranKedua ?></td>
                             <td><?= ucwords($r->namaLengkap) ?></td>
                             </tr>
-                            <?php }}elseif ($r->tenor == 3 && $r->sisaTenor == 2 && !empty($r->angsuranKetiga)) { 
+                            <?php }}elseif ($r->tenor == 3 && $r->sisaTenor == 2 ) { 
 
                             if ( $dateNow >= strtotime($r->angsuranKedua)) { ?><tr>
                             <td><?= $no++ ?></td>
@@ -383,7 +384,7 @@
                             <td><?= $r->angsuranKedua ?></td>
                             <td><?= ucwords($r->namaLengkap) ?></td>
                             </tr>
-                            <?php }}elseif ($r->tenor == 2 && $r->sisaTenor == 1 && !empty($r->angsuranKedua)) { 
+                            <?php }}elseif ($r->tenor == 2 && $r->sisaTenor == 1 ) { 
 
                             if ( $dateNow >= strtotime($r->angsuranKedua)) { ?><tr>
                             <td><?= $no++ ?></td>
@@ -398,7 +399,7 @@
                             </tr>
                             <?php }}
 
-                            if ($r->tenor == 5 && $r->sisaTenor == 3 && !empty($r->ansuranKelima)) { 
+                            if ($r->tenor == 5 && $r->sisaTenor == 3 ) { 
 
                             if ( $dateNow >= strtotime($r->angsuranKetiga)) { ?><tr>
                             <td><?= $no++ ?></td>
@@ -411,7 +412,7 @@
                             <td><?= $r->angsuranKetiga ?></td>
                             <td><?= ucwords($r->namaLengkap) ?></td>
                             </tr>
-                            <?php }}elseif ($r->tenor == 4 && $r->sisaTenor == 3 && !empty($r->angsuranKeempat)) { 
+                            <?php }}elseif ($r->tenor == 4 && $r->sisaTenor == 3 ) { 
 
                             if ( $dateNow >= strtotime($r->angsuranKetiga)) { ?><tr>
                             <td><?= $no++ ?></td>
@@ -424,7 +425,7 @@
                             <td><?= $r->angsuranKetiga ?></td>
                             <td><?= ucwords($r->namaLengkap) ?></td>
                             </tr>
-                            <?php }}elseif ($r->tenor == 3 && $r->sisaTenor == 2 && !empty($r->angsuranKetiga)) { 
+                            <?php }}elseif ($r->tenor == 3 && $r->sisaTenor == 2 ) { 
 
                             if ( $dateNow >= strtotime($r->angsuranKetiga)) { ?><tr>
                             <td><?= $no++ ?></td>
@@ -439,7 +440,7 @@
                             </tr>
                             <?php }}
 
-                            if ($r->tenor == 5 && $r->sisaTenor == 2 && !empty($r->ansuranKelima)) { 
+                            if ($r->tenor == 5 && $r->sisaTenor == 2 ) { 
 
                             if ( $dateNow >= strtotime($r->angsuranKeempat)) { ?><tr>
                             <td><?= $no++ ?></td>
@@ -452,7 +453,7 @@
                             <td><?= $r->angsuranKeempat ?></td>
                             <td><?= ucwords($r->namaLengkap) ?></td>
                             </tr>
-                            <?php }}elseif ($r->tenor == 4 && $r->sisaTenor == 1 && !empty($r->angsuranKeempat)) { 
+                            <?php }}elseif ($r->tenor == 4 && $r->sisaTenor == 1 ) { 
 
                             if ( $dateNow >= strtotime($r->angsuranKeempat)) { ?><tr>
                             <td><?= $no++ ?></td>
@@ -467,7 +468,7 @@
                             </tr>
                             <?php }}
 
-                            if ($r->tenor == 5 && $r->sisaTenor == 1 && !empty($r->ansuranKelima)) { 
+                            if ($r->tenor == 5 && $r->sisaTenor == 1 ) { 
 
                             if ( $dateNow >= strtotime($r->ansuranKelima)) { ?>
                             <td><?= $r->id_pinjaman ?></td>

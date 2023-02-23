@@ -54,8 +54,8 @@
 									<th>No</th>
 									<th>Nomor Transaksi</th>
 									<th>Nama Anggota</th>
-									<th>Keterangan</th>
-									<th>Nilai Transaksi</th>
+									<th>Plafond</th>
+									<th>Nominal Transaksi</th>
 									<th>Tanggal</th>
 								</tr>
 							</thead>
@@ -66,11 +66,13 @@
                                             <td><?= $no++ ?></td>
                                             <td><?= $r->serialNumber ?></td>
                                             <td><?= ucwords($r->namaAnggota) ?></td>
-                                            <td><?= ucwords($r->keterangan) ?></td>
-                                            <td><?= 'Rp. ' . number_format($r->nilaiTransaksi) ?></td>
+                                            <td><?= 'Rp. ' .number_format($this->l->getPlafonByPinjamanId($r->pinjaman_id)->plafon) ?></td>
+                                            <td><?= 'Rp. ' .number_format($r->nilaiTransaksi) ?></td>
                                             <td><?= date_indo($r->lastUpdate_t) ?></td>
                                         </tr>
-                                    <?php } ?>
+                                    <?php }
+									
+									?>
 							</tbody>
 						</table>
 

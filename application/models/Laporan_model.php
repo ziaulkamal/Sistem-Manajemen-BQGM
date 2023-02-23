@@ -149,6 +149,13 @@ class Laporan_model extends CI_Model
         
         return $this->db->get('bq_transaksi');
     }
+
+    function getPlafonByPinjamanId($id)
+    {
+        $this->db->where('id_pinjaman', $id);
+        return $this->db->get('bq_pinjaman')->row();
+        
+    }
 }
 
 

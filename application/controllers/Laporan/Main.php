@@ -67,8 +67,9 @@ class Main extends CI_Controller {
     function laporan_pembiayaan()
     {
         $getAO = $this->l->getAO()->result();
-        $load = $this->l->getPembiayaan()->result();
-        $data = array(
+        $load  = $this->l->getPembiayaan()->result();
+        
+        $data  = array(
             'title'     => 'Laporan Pembiayaan Anggota', 
             'page'      => 'pages/laporan/laporan_pembiayaan',
             'data'      => $load,
@@ -98,7 +99,9 @@ class Main extends CI_Controller {
 
     function laporan_angsuranPending()
     {
+        
         $load = $this->l->getPendingAngsuranAll()->result();
+        
         $data = array(
             'title'     => 'Laporan Angsuran Anggota Tertunda', 
             'page'      => 'pages/laporan/laporan_angsuran_tertunda',

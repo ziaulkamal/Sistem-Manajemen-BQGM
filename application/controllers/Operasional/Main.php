@@ -976,10 +976,9 @@ class Main extends CI_Controller {
             break;
 
             case 'operasional_trx':
-            $this->form_validation->set_rules('jumlah', 'Jumlah Uang', 'trim|required|numeric',
+            $this->form_validation->set_rules('jumlah', 'Jumlah Uang', 'trim|required',
             array(
                 'required'   => '%s Tidak Boleh Kosong',
-                'numeric' => '%s Hanya di Perbolehkan Angka',
             ));
             $this->form_validation->set_rules('keterangan', 'Keterangan', 'trim|required|min_length[5]|max_length[250]',
             array(

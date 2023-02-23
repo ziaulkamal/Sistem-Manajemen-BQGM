@@ -528,9 +528,7 @@ class Internal_model extends CI_Model
 
     function getDetailLastTrxAnggotaId($id)
     {
-        $this->db->where('type', 'simpok');
-        $this->db->or_where('type', 'simwa');
-        $this->db->or_where('type', 'simka');
+        $this->db->where_in('type', ['simpok', 'simwa', 'simka']);
         $this->db->where('is_anggota', $id);
         $this->db->order_by('id_transaksi', 'DESC');
         return $this->db->get('bq_transaksi', 5, 0)->result();

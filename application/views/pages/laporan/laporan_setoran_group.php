@@ -51,8 +51,10 @@
 								<tr>
 									<th>No</th>
 									<th>ID Transaksi</th>
-									<th>Keterangan</th>
-									<th>Nilai</th>
+									<th>ID Anggota</th>
+									<th>ID Anggota</th>
+									<th>Jenis</th>
+									<th>Nominal</th>
 									<th>Tanggal</th>
 								</tr>
 							</thead>
@@ -62,7 +64,9 @@
                                         <tr>
                                             <td><?= $no++ ?></td>
                                             <td><?= $r->serialNumber ?></td>
-                                            <td><?= ucwords($r->keterangan) ?></td>
+                                            <td><?= $r->is_anggota ?></td>
+                                            <td><?= ucwords($r->namaAnggota) ?></td>
+                                            <td><?= strtoupper($r->type) ?></td>
                                             <td><?= 'Rp. ' .number_format($r->nilaiTransaksi) ?></td>
 
                                             <td><?= date_indo($r->lastUpdate_t) ?></td>
